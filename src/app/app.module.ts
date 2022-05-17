@@ -12,9 +12,11 @@ import {MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon'; 
 import {MatCheckboxModule} from '@angular/material/checkbox'; 
+
 // component
-import { LoginComponent } from './pages/login/login.component';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { LoginComponent } from './components/login/login.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 
@@ -24,16 +26,17 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     AppComponent,
     LoginComponent,
     NotFoundComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     MatGridListModule,
     MatButtonModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule,
     MatIconModule,
     MatCheckboxModule
   ],

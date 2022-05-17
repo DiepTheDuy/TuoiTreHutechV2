@@ -27,9 +27,18 @@
                 </form>
                 <div class="option">
                     <mat-checkbox [color]="checkboxColor">Lưu thông tin</mat-checkbox>
-                    <a href="" class="contact">Liên hệ admin</a>
+                    <a href="https://www.facebook.com/theduy.ted/" class="contact">Liên hệ admin</a>
                 </div>
-                <button class="login-form__submit-btn" type="" mat-flat-button color="primary">Đăng nhập</button>
+                <button routerLink="/admin/home" class="login-form__submit-btn" type="submit" mat-flat-button
+                    color="primary">Đăng
+                    nhập</button>
+                <a href="https://sinhvien.hutech.edu.vn/#/sinhvien/login/login" class="login-form__authorize-btn"
+                    type="submit" mat-flat-button>
+                    <img src="../../../assets/images/logo-hutech.png" alt=""
+                        [ngStyle]="{'width':'25px','margin-right':'3px'}">
+                    Đăng nhập bằng hutech.edu.vn
+                </a>
+                <span class="login-form__note">Liên hệ admin nếu lỗi đăng nhập / quên mật khẩu</span>
             </div>
             <div class="footer">
                 <span>© TuoiTreHutech v.2.0.0</span>
@@ -41,7 +50,6 @@
             <div class="decorate-box square"></div>
             <div class="decorate-box oval"></div>
             <img class="thumnail-img" src="../../../assets/images/chibidoan.png" alt="">
-            <!-- <img class="thumnail-img logo" src="../../../assets/images/logo-hutech-full.png" alt=""> -->
             <div class="banner-wp">
                 <div class="banner">
                     <div class="line">

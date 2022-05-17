@@ -1,0 +1,185 @@
+<!-- <div class="sidebar">
+
+    <div class="top">
+        <a routerLink="/admin" class="logo">TedAdmin</a>
+    </div>
+    <div class="center">
+        <ul>
+            <p class="title">main</p>
+            <li>
+                <mat-icon matSuffix class='icon'>account_circle</mat-icon>
+                <span>dashboard</span>
+            </li>
+            <p class="title">list</p>
+
+            <li>
+                <mat-icon matSuffix class='icon'>account_circle</mat-icon>
+                <span>users</span>
+            </li>
+
+            <li>
+                <mat-icon matSuffix class='icon'>account_circle</mat-icon>
+                <span>products</span>
+            </li>
+            <li>
+                <mat-icon matSuffix class='icon'>account_circle</mat-icon>
+                <span>delivery</span>
+            </li>
+            <p class="title">useful</p>
+            <li>
+                <mat-icon matSuffix class='icon'>account_circle</mat-icon>
+                <span>stats</span>
+            </li>
+            <li>
+                <mat-icon matSuffix class='icon'>account_circle</mat-icon>
+                <span>notifications</span>
+            </li>
+            <p class="title">service</p>
+            <li>
+                <mat-icon matSuffix class='icon'>account_circle</mat-icon>
+                <span>system health</span>
+            </li>
+            <li>
+                <mat-icon matSuffix class='icon'>account_circle</mat-icon>
+                <span>log</span>
+            </li>
+            <li>
+                <mat-icon matSuffix class='icon'>account_circle</mat-icon>
+                <span>setting</span>
+            </li>
+            <p class="title">user</p>
+            <li>
+                <mat-icon matSuffix class='icon'>account_circle</mat-icon>
+                <span>profile</span>
+            </li>
+            <li>
+                <mat-icon matSuffix class='icon'>account_circle</mat-icon>
+                <span>logout</span>
+            </li>
+        </ul>
+    </div>
+
+</div> -->
+<div class="sidebar close">
+    <div class="sidebar-header">
+        <div class="logo">
+            <img src="../../../../../assets/images/logo-hutech.png" alt="">
+        </div>
+        <div class="logo_name">SV-Hutech</div>
+    </div>
+    <ul class="sidebar-menu">
+        <!-- dashboard -->
+        <li class="sidebar-menu_item">
+            <a href="" class="sidebar-menu_item--link">
+                <mat-icon class="sidebar-menu_item--icon">dashboard</mat-icon>
+                <span class="sidebar-menu_item--text">dashboard</span>
+            </a>
+            <ul class="sidebar-submenu blank">
+                <li>
+                    <h3 class="header-submenu">dashboard</h3>
+                </li>
+            </ul>
+        </li>
+        <!-- union book -->
+        <li class="sidebar-menu_item" routerLink="/admin/union-books">
+            <a href="" class="sidebar-menu_item--link">
+                <mat-icon class="sidebar-menu_item--icon">auto_stories</mat-icon>
+                <span class="sidebar-menu_item--text">sổ đoàn</span>
+            </a>
+            <ul class="sidebar-submenu blank">
+                <li>
+                    <h3 class="header-submenu">sổ đoàn</h3>
+                </li>
+            </ul>
+        </li>
+        <!-- class and major -->
+        <li class="sidebar-menu_item">
+            <div class="sidebar-menu_item--has-sub-menu">
+                <a href="" class="sidebar-menu_item--link">
+                    <mat-icon class="sidebar-menu_item--icon">school</mat-icon>
+                    <span class="sidebar-menu_item--text">khoa & lớp</span>
+                </a>
+                <mat-icon class="dropdown-icon">expand_more</mat-icon>
+            </div>
+            <ul class="sidebar-submenu">
+                <li>
+                    <h3 class="header-submenu">khoa & lớp</h3>
+                </li>
+                <li class="sidebar-submenu_item">
+                    <a href="" class="sidebar-menu_item--link sub-menu ">
+                        <mat-icon class="sidebar-submenu_item--icon">group</mat-icon>
+                        <span class="sidebar-submenu_item--text">Danh sách khoa</span>
+                    </a>
+                </li>
+                <li class="sidebar-submenu_item">
+                    <a href="" class="sidebar-menu_item--link sub-menu ">
+                        <mat-icon class="sidebar-submenu_item--icon">group</mat-icon>
+                        <span class="sidebar-submenu_item--text">Danh sách lớp</span>
+                    </a>
+                </li>
+                <li class="sidebar-submenu_item">
+                    <a href="" class="sidebar-menu_item--link sub-menu ">
+                        <mat-icon class="sidebar-submenu_item--icon">group</mat-icon>
+                        <span class="sidebar-submenu_item--text">Danh sách sinh viên</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="sidebar-menu_item">
+            <a href="" class="sidebar-menu_item--link">
+                <mat-icon class="sidebar-menu_item--icon">dashboard</mat-icon>
+                <span class="sidebar-menu_item--text">dashboard</span>
+            </a>
+            <ul class="sidebar-submenu blank">
+                <li>
+                    <h3 class="header-submenu">dashboard</h3>
+                </li>
+            </ul>
+        </li>
+        <!-- trainning point -->
+        <li class="sidebar-menu_item">
+            <div class="sidebar-menu_item--has-sub-menu">
+                <a href="" class="sidebar-menu_item--link">
+                    <mat-icon class="sidebar-menu_item--icon">school</mat-icon>
+                    <span class="sidebar-menu_item--text">Đánh giá rèn luyện</span>
+                </a>
+                <mat-icon class="dropdown-icon">expand_more</mat-icon>
+            </div>
+            <ul class="sidebar-submenu">
+                <li>
+                    <h3 class="header-submenu">Đánh giá rèn luyện</h3>
+                </li>
+                <li class="sidebar-submenu_item">
+                    <a href="" class="sidebar-menu_item--link sub-menu ">
+                        <mat-icon class="sidebar-submenu_item--icon">list_alt</mat-icon>
+                        <span class="sidebar-submenu_item--text">Điểm đoàn viên</span>
+                    </a>
+                </li>
+                <li class="sidebar-submenu_item">
+                    <a href="" class="sidebar-menu_item--link sub-menu ">
+                        <mat-icon class="sidebar-submenu_item--icon">fact_check</mat-icon>
+                        <span class="sidebar-submenu_item--text">Điểm lớp</span>
+                    </a>
+                </li>
+                <li class="sidebar-submenu_item">
+                    <a href="" class="sidebar-menu_item--link sub-menu ">
+                        <mat-icon class="sidebar-submenu_item--icon">fact_check</mat-icon>
+                        <span class="sidebar-submenu_item--text">Điểm khoa</span>
+                    </a>
+                </li>
+                <li class="sidebar-submenu_item">
+                    <a href="" class="sidebar-menu_item--link sub-menu ">
+                        <mat-icon class="sidebar-submenu_item--icon">fact_check</mat-icon>
+                        <span class="sidebar-submenu_item--text">Điểm trường</span>
+                    </a>
+                </li>
+                <li class="sidebar-submenu_item">
+                    <a href="" class="sidebar-menu_item--link sub-menu ">
+                        <mat-icon class="sidebar-submenu_item--icon">checklist_rtl</mat-icon>
+                        <span class="sidebar-submenu_item--text">Phiếu chấm</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

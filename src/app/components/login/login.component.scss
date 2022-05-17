@@ -11,7 +11,7 @@
         transform: translate(-50%, -50%);
         display: flex;
         width: 1182px;  
-        height: 600px;
+        height: 630px;
         border-radius: 10px;
         overflow: hidden;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -83,11 +83,36 @@
                 }
                 .login-form__submit-btn{
                     width: 100%;
-                    margin-top: 20px;
+                    margin-top: 22px;
                     background-color: #5995fd;
                     padding-top: 5px;
                     padding-bottom: 5px;
                     border-radius: 7px;
+                }
+                .login-form__authorize-btn{
+                    width: 100%;
+                    margin-top: 10px;
+                    background-color: transparent;                    
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    border-radius: 7px;
+                    color: #818894;
+                    border: 1px solid #dfe2e6;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all 0.2s;
+
+                    &:hover{
+                        border: 1px solid #b3b3b3;                       
+                    }
+                }
+                .login-form__note{
+                    font-size: 11px;
+                    display: block;
+                    margin-top: 7px;
+                    color: #b0b4be;
+                    text-align: center;
                 }
             }
 
