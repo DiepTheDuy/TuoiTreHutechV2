@@ -5,6 +5,9 @@
 export const environment = {
   production: false
 };
+// api url  
+export const baseUrl = 'https://api.tuoitrehutech.com/api/';
+
 
 /*
  * For easier debugging in development mode, you can import the following file

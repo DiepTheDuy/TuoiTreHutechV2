@@ -1,6 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, observable, of, throwError } from 'rxjs';
+import { baseUrl } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -8,9 +10,9 @@ import { Observable, observable, of, throwError } from 'rxjs';
 export class AuthService {
 
 
-  constructor(private router: Router) {}
+  constructor(private http: HttpClient,  private router: Router) {}
   
-  // set token
+  //set token
   setToken(token: string): void{
     localStorage.setItem('token',token)
   }
@@ -32,6 +34,7 @@ export class AuthService {
   }
 
   //login
+
   login({email, password} : any): Observable<any> {
     //set temp ->> neeed to connect to real api
     if(email === 'abc@gmail.com' && password === '123456'){
@@ -40,5 +43,12 @@ export class AuthService {
     }
     return throwError(new Error('Fail to login'))
   }
+
+
+  // login(data: any):Observable<any>{
+  //   return this.http.post(`${baseUrl}Login/Login`,data)
+  // }
+  
+
 
 }
