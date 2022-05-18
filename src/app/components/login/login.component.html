@@ -8,36 +8,37 @@
             <div class="body">
                 <h2 class="title">Đăng nhập</h2>
                 <p class="subtitle">Cổng thông tin đoàn viên dành cho Hutech-er</p>
-                <form action="" class="login-form">
+                <form action="" class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
                     <mat-form-field appearance="outline">
                         <mat-label>Tài khoản</mat-label>
-                        <input type="number | email" matInput placeholder="18********">
+                        <input type="number | email" matInput placeholder="18********" formControlName="email">
                         <mat-icon matSuffix>account_circle</mat-icon>
                         <mat-hint>Vui lòng nhập mssv / email</mat-hint>
                     </mat-form-field>
                     <mat-form-field appearance="outline" [ngStyle]="{'margin-top':'15px'}">
                         <mat-label>Mật khẩu</mat-label>
-                        <input [type]="hide ? 'password' : 'text'" matInput>
+                        <input [type]="hide ? 'password' : 'text'" matInput formControlName="password">
                         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                             [attr.aria-pressed]="hide">
                             <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                         </button>
                         <mat-hint>Vui lòng nhập mật khẩu</mat-hint>
                     </mat-form-field>
+                    <div class="option">
+                        <mat-checkbox [color]="checkboxColor">Lưu thông tin</mat-checkbox>
+                        <a href="https://www.facebook.com/theduy.ted/" class="contact">Liên hệ admin</a>
+                    </div>
+                    <button class="login-form__submit-btn" type="submit" mat-flat-button
+                        color="primary">Đăng
+                        nhập</button>
+                    <a href="https://sinhvien.hutech.edu.vn/#/sinhvien/login/login" class="login-form__authorize-btn"
+                        type="submit" mat-flat-button>
+                        <img src="../../../assets/images/logo-hutech.png" alt=""
+                            [ngStyle]="{'width':'25px','margin-right':'3px'}">
+                        Đăng nhập bằng hutech.edu.vn
+                    </a>
                 </form>
-                <div class="option">
-                    <mat-checkbox [color]="checkboxColor">Lưu thông tin</mat-checkbox>
-                    <a href="https://www.facebook.com/theduy.ted/" class="contact">Liên hệ admin</a>
-                </div>
-                <button routerLink="/admin/home" class="login-form__submit-btn" type="submit" mat-flat-button
-                    color="primary">Đăng
-                    nhập</button>
-                <a href="https://sinhvien.hutech.edu.vn/#/sinhvien/login/login" class="login-form__authorize-btn"
-                    type="submit" mat-flat-button>
-                    <img src="../../../assets/images/logo-hutech.png" alt=""
-                        [ngStyle]="{'width':'25px','margin-right':'3px'}">
-                    Đăng nhập bằng hutech.edu.vn
-                </a>
+                
                 <span class="login-form__note">Liên hệ admin nếu lỗi đăng nhập / quên mật khẩu</span>
             </div>
             <div class="footer">

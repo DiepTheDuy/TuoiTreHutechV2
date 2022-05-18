@@ -3,13 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 import {LoginComponent} from '../app/components/login/login.component'
 import {HomeComponent} from '../app/components/home/home.component'
 import {NotFoundComponent} from '../app/components/not-found/not-found.component'
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
-  // {path: '', redirectTo:'/login', pathMatch:'full' },
+  {path: '', redirectTo:'/login', pathMatch:'full' },
   {
     //Lazy loading
-    path:'admin' , loadChildren: ()=> 
+    path:'admin' ,
+    canActivate: [AuthGuard],
+    loadChildren: ()=> 
     import('./modules/admin/admin.module')
     .then((m) => m.AdminModule) 
   },
