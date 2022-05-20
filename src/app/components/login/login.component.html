@@ -8,10 +8,10 @@
             <div class="body">
                 <h2 class="title">Đăng nhập</h2>
                 <p class="subtitle">Cổng thông tin đoàn viên dành cho Hutech-er</p>
-                <form action="" class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <form action="" class="login-form" [formGroup]="loginForm" (ngSubmit)="loginProcess()">
                     <mat-form-field appearance="outline">
                         <mat-label>Tài khoản</mat-label>
-                        <input type="number | email" matInput placeholder="18********" formControlName="email">
+                        <input type="number | email" matInput placeholder="18********" formControlName="username">
                         <mat-icon matSuffix>account_circle</mat-icon>
                         <mat-hint>Vui lòng nhập mssv / email</mat-hint>
                     </mat-form-field>

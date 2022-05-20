@@ -35,19 +35,19 @@ export class AuthService {
 
   //login
 
-  login({email, password} : any): Observable<any> {
-    //set temp ->> neeed to connect to real api
-    if(email === 'abc@gmail.com' && password === '123456'){
-      this.setToken('abcdefg')
-      return of({name: 'The Duy', email: 'abc@gmail.com'})
-    }
-    return throwError(new Error('Fail to login'))
-  }
-
-
-  // login(data: any):Observable<any>{
-  //   return this.http.post(`${baseUrl}Login/Login`,data)
+  // login({email, password} : any): Observable<any> {
+  //   //set temp ->> neeed to connect to real api
+  //   if(email === 'abc@gmail.com' && password === '123456'){
+  //     this.setToken('abcdefg')
+  //     return of({name: 'The Duy', email: 'abc@gmail.com'})
+  //   }
+  //   return throwError(new Error('Fail to login'))
   // }
+
+
+  login(data:any):Observable<any>  {
+    return this.http.post(`${baseUrl}Login/Login`,data)
+  }
   
 
 

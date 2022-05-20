@@ -12,12 +12,12 @@ export class LoginComponent implements OnInit {
   hide = true;
   checkboxColor = 'primary';
   hideRequiredControl = new FormControl(false);
-  //formGroup: FormGroup
+  loginForm: FormGroup
     
-  loginForm = new FormGroup({
-    email: new FormControl(''),
-    password: new FormControl(''),
-  });
+  // loginForm = new FormGroup({
+  //   email: new FormControl(''),
+  //   password: new FormControl(''),
+  // });
     //emailFormControl:FormControl = new FormControl('', [Validators.required, Validators.email]);
     // matcher = new MyErrorStateMatcher()
 
@@ -37,32 +37,34 @@ export class LoginComponent implements OnInit {
     //this.initForm()
   }
 
-  // initForm(){
-  //   this.formGroup = new FormGroup({
-  //     username: new FormControl(''),
-  //     password: new FormControl(''),
-  //   })
-  // }
+  initForm(){
+    this.loginForm = new FormGroup({
+      username: new FormControl(''),
+      password: new FormControl(''),
+    })
+  }
 
-  // loginProcess(){
-  //   if(this.formGroup?.valid){
-  //     this.auth.login(this.formGroup.value).subscribe(result=>{
-  //       if(!result.IsError){
-  //         console.log(result.token)
-  //         alert('login success')
-  //       }else{
-  //         alert('login fail')
-  //       }
-  //     })
-  //   }
-  //}
-
-  onSubmit(): void {
-    if (this.loginForm.valid) {
-      this.auth.login(this.loginForm.value).subscribe(
-        (result) => {this.router.navigate(['admin'])},
-        (error: Error) => alert(error.message)
-      );
+  loginProcess(){
+    if(this.loginForm?.valid){
+      this.auth.login(this.loginForm.value).subscribe(result=>{
+        if(!result.IsError){
+          console.log(result.token)
+          alert('login success')
+        }else{
+          alert('login fail')
+        }
+      })
     }
   }
+
+  // onSubmit(): void {
+  //   if (this.loginForm.valid) {
+  //     this.auth.login(this.loginForm.value).subscribe(
+  //       (result) => {this.router.navigate(['admin'])},
+  //       (error: Error) => alert(error.message)
+  //     );
+  //   }
+  // }
+
+  
 }
