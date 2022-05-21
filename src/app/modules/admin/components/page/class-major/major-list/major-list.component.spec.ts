@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UnionBooksComponent } from './union-books.component';
+import { MajorListComponent } from './major-list.component';
 
-describe('UnionBooksComponent', () => {
-  let component: UnionBooksComponent;
-  let fixture: ComponentFixture<UnionBooksComponent>;
+describe('MajorListComponent', () => {
+  let component: MajorListComponent;
+  let fixture: ComponentFixture<MajorListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UnionBooksComponent ]
+      declarations: [ MajorListComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UnionBooksComponent);
+    fixture = TestBed.createComponent(MajorListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

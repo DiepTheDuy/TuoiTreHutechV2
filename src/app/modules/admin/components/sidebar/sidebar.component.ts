@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { sideBarData } from 'src/app/mock/mock-sidebarData';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,13 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
+  isSidebarClose:boolean = false 
+
+  sideBarData:any[] = sideBarData
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
 
-    
-
+  toggleSidebar():void{
+    this.isSidebarClose= !this.isSidebarClose
   }
 
 }
