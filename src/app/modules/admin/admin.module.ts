@@ -6,7 +6,6 @@ import { AdminDashboardComponent } from './components/admin-dashboard/admin-dash
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HomeComponent } from './components/home/home.component';
-import { UnionBooksComponent } from './components/union-books/union-books.component';
 
 // import form material
 import {MatGridListModule} from '@angular/material/grid-list';
@@ -16,6 +15,12 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon'; 
 import {MatCheckboxModule} from '@angular/material/checkbox'; 
 import {MatBadgeModule} from '@angular/material/badge';
+import { SidebarLinkComponent } from './components/sidebar-link/sidebar-link.component';
+import { UnionListComponent } from './components/page/unions/union-list/union-list.component';
+import { ClassListComponent } from './components/page/class-major/class-list/class-list.component';
+import { MajorListComponent } from './components/page/class-major/major-list/major-list.component';
+import { StudentListComponent } from './components/page/class-major/student-list/student-list.component';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +28,11 @@ import {MatBadgeModule} from '@angular/material/badge';
     HeaderComponent,
     SidebarComponent,
     HomeComponent,
-    UnionBooksComponent
+    SidebarLinkComponent,
+    UnionListComponent,
+    ClassListComponent,
+    MajorListComponent,
+    StudentListComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,26 @@
+
+<li class="sidebar-menu_item" [class.mini-sidebar]="miniSidebar">
+    <div class="sidebar-menu_item--has-sub-menu" (click)="toggleSubmenu()">
+        <div class="sidebar-menu_item--link">
+            <mat-icon class="sidebar-menu_item--icon">{{item.icon}}</mat-icon>
+            <span class="sidebar-menu_item--text">{{item.title}}</span>
+        </div>
+        <div *ngIf="item.subMenu">
+            <mat-icon mat-flat-button class="dropdown-icon" [class.close]="!isCloseSubmenu" >expand_more</mat-icon>
+        </div>
+    </div>
+    <ul class="sidebar-submenu" [class.active]="!isCloseSubmenu" >
+        <li>
+            <h3 class="header-submenu">{{item.title}}</h3>
+        </li>
+        <div *ngFor="let subItem of item.subMenu">
+            <li class="sidebar-submenu_item">
+                <a href="" class="sidebar-menu_item--link sub-menu" routerLink="{{subItem.path}}">
+                    <mat-icon class="sidebar-submenu_item--icon">{{subItem.icon}}</mat-icon>
+                    <span class="sidebar-submenu_item--text">{{subItem.title}}</span>
+                </a>
+            </li>
+        </div>
+    </ul>
+</li>
+

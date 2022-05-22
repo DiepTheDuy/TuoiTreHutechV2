@@ -1,8 +1,6 @@
 <div class="navbar">
     <div class="wrapper">
-        <div class="left">
-            <h1>hello</h1>
-        </div>
+        <div class="left"></div>
         <div class="right">
             <!-- <div class="search">
                 <mat-icon class='icon'>search</mat-icon>
@@ -15,7 +13,30 @@
                     </button>
                 </div>
                 <div class="item">
-                    <img src="../../../../../assets/images/avatar.jpg" alt="" class="avatar" />
+                    <img src="../../../../../assets/images/avatar.jpg" alt="" class="avatar"
+                    (click)="toggleUserOptions()"
+                    />
+
+                    <div class="user-options-wp" [class.active]="isUserOptions">
+                        
+                        <div class="user-option">
+                            <mat-icon class="user-option-icon">insert_emoticon</mat-icon>
+                            <span class="user-option-text">Thông tin người dùng</span>
+                        </div>
+                        <div class="user-option">
+                            <mat-icon class="user-option-icon">settings</mat-icon>
+                            <span class="user-option-text">Cài đặt</span>
+                        </div>
+                        <!-- logout options -->
+                        <div class="user-option" (click)="logout()">
+                            <mat-icon class="user-option-icon">logout</mat-icon>
+                            <span class="user-option-text">Đăng xuất</span>
+                        </div>
+                        
+                        
+                          
+                        
+                    </div>
                 </div>
             </div>
         </div>

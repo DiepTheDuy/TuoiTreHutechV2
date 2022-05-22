@@ -1,5 +1,5 @@
 .navbar {
-    height: 65px;
+    height: 80px;
     border-bottom: 0.5px solid rgb(230, 230, 227);
     display: flex;
     align-items: center;
@@ -59,10 +59,78 @@
                     }
             
                     .avatar {
-                    width: 37px;
-                    background: #FEFEFF;
-                    box-shadow: 0px 100px 80px rgba(41, 72, 152, 0.05), 0px 64.8148px 46.8519px rgba(41, 72, 152, 0.037963), 0px 38.5185px 25.4815px rgba(41, 72, 152, 0.0303704), 0px 20px 13px rgba(41, 72, 152, 0.025), 0px 8.14815px 6.51852px rgba(41, 72, 152, 0.0196296), 0px 1.85185px 3.14815px rgba(41, 72, 152, 0.012037);
-                    border-radius: 10px;
+                        width: 37px;
+                        background: #FEFEFF;
+                        //box-shadow: 0px 100px 80px rgba(41, 72, 152, 0  .05), 0px 64.8148px 46.8519px rgba(41, 72, 152, 0.037963), 0px 38.5185px 25.4815px rgba(41, 72, 152, 0.0303704), 0px 20px 13px rgba(41, 72, 152, 0.025), 0px 8.14815px 6.51852px rgba(41, 72, 152, 0.0196296), 0px 1.85185px 3.14815px rgba(41, 72, 152, 0.012037);
+                        border-radius: 10px;
+                        border: 2px solid #f1f1f1;
+                        position: relative;
+                        top: 0;
+                        transition: all 0.2s ease;
+
+                        &:hover{
+                            top: -3px;
+                            transition: all 0.2s ease;
+                        }
+                    }
+
+                    //user option
+                    .user-options-wp{
+                        position: absolute;
+                        top: 120%;
+                        right: 0;
+                        background-color: #fff;
+                        border: 1px solid #22222221;
+                        border-radius: 7px;
+                        box-shadow: rgb(0 0 0 / 10%) 0px 2px 12px 0px;
+                        display: none;
+
+                        .user-option{
+                            display: flex;
+                            align-items: center;
+                            padding: 12px 25px 12px 25px;
+                            transition: all 0.2s ease;
+                            border-top:1px solid #f1f1f1 ;
+                            border-bottom:1px solid #f1f1f1 ;
+                            cursor: pointer;
+                            
+                            .user-option-icon{
+                                color: #595959;
+                            }
+                            .user-option-text{
+                                white-space: nowrap;
+                                margin-left: 10px;
+                                color: #595959;
+                            }
+
+                            &:hover {
+                                background-color: #f1f1f1;
+                                transition: all 0.2s ease;
+                            }
+
+                            &:first-child{
+                                border-radius: 7px 7px 0px 0px;
+                                border-bottom: none;
+                                padding-top: 15px;
+                            }
+                            &:last-child{
+                                border-radius:0px 0px 7px 7px;
+                                border-top: none;
+                                padding-bottom: 15px;
+
+                                .user-option-icon,
+                                .user-option-text{
+                                    color: #ff000099;
+                                }
+                            }
+                        }
+
+                        //active
+                        &.active{
+                            display: block;
+                            animation: fadeIn 0.2s linear;
+                        }
+
                     }
                 }
             }
@@ -70,3 +138,12 @@
     }
   }
   
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    25% {opacity:0.25;}
+    50% {opacity:0.5;}
+    70% {opacity:0.75;}
+    100% {opacity:1;}
+}
+        

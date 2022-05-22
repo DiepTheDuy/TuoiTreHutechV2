@@ -12,10 +12,9 @@ export class LoginComponent implements OnInit {
   hide = true;
   checkboxColor = 'primary';
   hideRequiredControl = new FormControl(false);
-  loginForm = new FormGroup({
-    email: new FormControl(''),
-    password: new FormControl(''),
-  });
+
+
+  
 
   //emailFormControl:FormControl = new FormControl('', [Validators.required, Validators.email]);
 
@@ -27,7 +26,19 @@ export class LoginComponent implements OnInit {
     if(this.auth.isLoggedIn()){
       this.router.navigate(['admin'])
     }
+
+    //this.initForm()    
+
   }
+
+  
+  // fake authorize
+  
+  
+  loginForm = new FormGroup({
+    email: new FormControl(''),
+    password: new FormControl(''),
+  });
 
   onSubmit(): void {
     if (this.loginForm.valid) {
@@ -37,4 +48,30 @@ export class LoginComponent implements OnInit {
       );
     }
   }
+
+
+  // token authorize
+
+  // loginForm: FormGroup
+
+  // initForm(){
+  //   this.loginForm= new FormGroup({
+  //     username: new FormControl(''),
+  //     password: new FormControl(''),
+  //   })
+  // }
+
+  // loginProcess(){
+  //   if(this.loginForm?.valid){
+  //     this.auth.login(this.loginForm.value).subscribe(result=>{
+  //       if(!result.IsError){
+  //         console.log(result.token)
+  //         alert('login success')
+  //       }else{
+  //         alert('login fail')
+  //       }
+  //     })
+  //   }
+  // }
+
 }
