@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin-dashboard.component.scss']
 })
 export class AdminDashboardComponent implements OnInit {
-
+  showFiller = false;
+  showSidebar= true
   constructor() { }
 
   ngOnInit(): void {
   }
+
 
 }

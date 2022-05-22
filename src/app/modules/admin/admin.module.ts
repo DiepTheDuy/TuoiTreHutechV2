@@ -21,6 +21,7 @@ import { ClassListComponent } from './components/page/class-major/class-list/cla
 import { MajorListComponent } from './components/page/class-major/major-list/major-list.component';
 import { StudentListComponent } from './components/page/class-major/student-list/student-list.component';
 
+
 @NgModule({
   declarations: [
     AdminDashboardComponent,
